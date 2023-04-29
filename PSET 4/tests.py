@@ -169,7 +169,7 @@ class TestCases(unittest.TestCase):
         self.assertTrue(check(tests[4]))
 
     # BUG: The tastiest slice actually depends on order of toppings
-    # sorted by y coordinates for toppings sharing an x-coordinated!
+    # sorted by y coordinates for toppings sharing an x-coordinate!
     def test_06(self):
         self.assertTrue(check(tests[5]))
 
