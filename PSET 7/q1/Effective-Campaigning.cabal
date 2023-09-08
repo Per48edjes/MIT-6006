@@ -1,0 +1,54 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           Effective-Campaigning
+version:        0.1.0.0
+description:    Simple implementation vis-a-vis Q1, PSET 7 from MIT 6.006 (Spring 2020)
+homepage:       https://github.com/Per48edjes/Effective-Campaigning#readme
+bug-reports:    https://github.com/Per48edjes/Effective-Campaigning/issues
+author:         Ravi Dayabhai
+maintainer:     r.i.dayabhai@gmail.com
+copyright:      2023 Ravi Dayabhai
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/Per48edjes/Effective-Campaigning
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_Effective_Campaigning
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , memoize
+    , vector
+  default-language: Haskell2010
+
+test-suite Effective-Campaigning-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_Effective_Campaigning
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Effective-Campaigning
+    , base >=4.7 && <5
+    , hspec
+    , memoize
+    , vector
+  default-language: Haskell2010
